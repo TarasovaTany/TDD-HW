@@ -9,6 +9,12 @@ public class PhoneBook {
         return contacts.size();
     }
     public String findByNumber(String phone) {
+        for (Map.Entry<String, String> entry : contacts.entrySet()) {
+            if (entry.getValue().equals(phone)) {
+                return entry.getKey();
+            }
+        }
         return null;
     }
 }
+
