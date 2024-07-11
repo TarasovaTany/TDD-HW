@@ -21,7 +21,7 @@ public class PhoneBookTest {
     void addTest() {
         var expeated = 1;
         var actual = contacts.add("Василий", "+79545255464");
+        System.out.println("Контакт добавлен");
         Assertions.assertEquals(expeated, actual);
     }
-
 }
