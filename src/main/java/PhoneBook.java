@@ -16,7 +16,11 @@ public class PhoneBook {
                 .orElse(null);
     }
     public String findByName(String name) {
-        return null;
+        return contacts.entrySet().stream()
+                .filter(entry -> entry.getKey().equals(name))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse(null);
     }
 }
 

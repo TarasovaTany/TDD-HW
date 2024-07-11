@@ -41,6 +41,7 @@ public class PhoneBookTest {
         contacts.add("Дмитрий", "+79678467848");
         var expeated = "+79678467848";
         var actual = contacts.findByName("Дмитрий");
+        System.out.println("Поиск по имени воспроизводится");
         Assertions.assertEquals(expeated, actual);
     }
 }
