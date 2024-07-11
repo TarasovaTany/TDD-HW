@@ -24,4 +24,13 @@ public class PhoneBookTest {
         System.out.println("Контакт добавлен");
         Assertions.assertEquals(expeated, actual);
     }
+    @Test
+    void findByNumberTest () {
+        contacts.add("Александра", "+79515779121");
+        contacts.add("Мария", "+79123601661");
+        contacts.add("Роман", "+79234520692");
+        var expeated = "Мария";
+        var actual = contacts.findByNumber("+79123601661");
+        Assertions.assertEquals(expeated, actual);
+    }
 }
