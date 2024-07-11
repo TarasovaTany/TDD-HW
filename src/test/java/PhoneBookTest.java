@@ -34,4 +34,13 @@ public class PhoneBookTest {
         System.out.println("Поиск по номеру воспроизводится");
         Assertions.assertEquals(expeated, actual);
     }
+    @Test
+    void findByNameTest () {
+        contacts.add("Татьяна", "+79344576227");
+        contacts.add("Владимир", "+79645272257");
+        contacts.add("Дмитрий", "+79678467848");
+        var expeated = "+79678467848";
+        var actual = contacts.findByName("Дмитрий");
+        Assertions.assertEquals(expeated, actual);
+    }
 }
