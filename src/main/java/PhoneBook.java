@@ -22,5 +22,8 @@ public class PhoneBook {
                 .findFirst()
                 .orElse(null);
     }
+    public String printAllNames () {
+        return null;
+    }
 }
 
