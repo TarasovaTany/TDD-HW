@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class PhoneBook {
     Map<String, String> contacts = new HashMap<>();
@@ -22,8 +24,11 @@ public class PhoneBook {
                 .findFirst()
                 .orElse(null);
     }
-    public String printAllNames () {
-        return null;
+    public void printAllNames () {
+        Set<String> sortedNames = new TreeSet<>(contacts.keySet());
+        for (String name : sortedNames) {
+            System.out.println(name);
+        }
     }
 }
 
