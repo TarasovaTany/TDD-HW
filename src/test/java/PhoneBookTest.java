@@ -55,7 +55,7 @@ public class PhoneBookTest {
         contacts.add("Мария", "+79123601661");
         contacts.add("Роман", "+79234520692");
 
-        String expectedOutput = "Александра\nВладимир\nДмитрий\nМария\nРоман\nТатьяна\n";
+        String expectedOutput = "Александра\r\nВладимир\r\nДмитрий\r\nМария\r\nРоман\r\nТатьяна\r\n";
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outputStream);
